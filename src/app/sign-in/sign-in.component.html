@@ -1,0 +1,33 @@
+<div style="background: #FFDF58; height:100vh;">
+  <div class="container bg-white text-center"
+    style="border-radius:12px;position:absolute;top:60px;left:10%;padding:20px;">
+
+    <div class="row">
+      <div class="col-lg-12">
+        <img src="../../assets/codzfy_logo.png" width="60" style="padding-top: 20px;;"><br /><br />
+
+        <h1 style="font-size: 44px;;"><b>Codzify GenZ School</b></h1>
+
+        <button style="background-color: transparent;border:none; " (click)="authService.GoogleAuth()">
+
+          <img src="../../assets/btn_google_signin_light_normal_web@2x.png" style="width: 60%;">
+        </button>
+
+        <p>or</p>
+
+        <div id="recaptcha-container"></div>
+          <input matInput placeholder="Mobile Number" [(ngModel)]="mobileNumberString" required>
+
+        &nbsp;<br />
+
+          <input matInput placeholder="Enter OTP" [(ngModel)]="verifyOtpString" required>
+
+        <br />
+
+        <button class="btn btn-primary" (click)="sendLoginOtp()">Send OTP</button> &nbsp;
+
+        <button class="btn btn-primary" id="verifyBtn" (click)="verifyOtp()">Verify OTP</button>
+      </div>
+    </div>
+  </div>
+</div>
